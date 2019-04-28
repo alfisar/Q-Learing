@@ -1,22 +1,21 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[24]:
+# In[36]:
 
 
 import pandas as pd
 import random
 
-data = pd.read_csv('DataTugas3ML2019.csv',sep = '\t',header = -1)
+data = pd.read_csv('DataTugas3ML2019.txt',sep = '\t',header = -1)
 pd.set_option("display.max_columns", 225)
 pd.set_option('display.max_colwidth', 10000)
-print(pd.DataFrame(data))
-
+data
 
 
 # # Penentuan Tabel Q
 
-# In[25]:
+# In[37]:
 
 
 def PossibleA(x,y):
@@ -50,7 +49,7 @@ def PossibleA(x,y):
     return arah
 
 
-# In[65]:
+# In[38]:
 
 
 def jalan(arah):
@@ -58,17 +57,17 @@ def jalan(arah):
 #     print(arah)
     if(arahsblm == 'N'):
         arah.remove('S')
-    if(arahsblm == 'S'):
+    elif(arahsblm == 'S'):
         arah.remove('N')
-    if(arahsblm == 'E'):
+    elif(arahsblm == 'E'):
         arah.remove('W')
-    if(arahsblm == 'W'):
+    elif(arahsblm == 'W'):
         arah.remove('E')
         
     return arah
 
 
-# In[66]:
+# In[39]:
 
 
 def pemilihanjalan(x,y,arah):
@@ -90,7 +89,7 @@ def pemilihanjalan(x,y,arah):
     return x,y,arah[0]
 
 
-# In[105]:
+# In[52]:
 
 
 TabelQ = []
@@ -101,10 +100,10 @@ for i in range(225):
 TabelQ = pd.DataFrame(TabelQ,columns = ['N','S','E','W'])
 TabelQ = TabelQ.T
 
-print(pd.DataFrame(TabelQ))
+TabelQ
 
 
-# In[106]:
+# In[53]:
 
 
 alfa = 1
@@ -113,7 +112,7 @@ x = 0
 y = 14
 arahsblm = ''
 
-for j in range (20):
+for episode in range (25):# jika pada saat hasil akhir di run tidak kluar hasilnya silahkan perbesar episodenya
     x = 0
     y = 14
     arahsblm = ''
@@ -121,14 +120,12 @@ for j in range (20):
         arah = PossibleA(x,y)
         arah = jalan(arah)
         x,y,arahsblm = pemilihanjalan(x,y,arah)
-
-print(pd.DataFrame(TabelQ))
-
+TabelQ
 
 
 # # Penentuan arah jalan
 
-# In[107]:
+# In[54]:
 
 
 def PossibleA2(x,y,arah):
@@ -160,11 +157,12 @@ def PossibleA2(x,y,arah):
     return arah
 
 
-# In[108]:
+# In[55]:
 
 
 def maxTabel(x,y,arah,total):
     index = x + y*15
+    nomor.append(index)
 #     print(index)
     temp = []
 #     print(arah)
@@ -181,25 +179,30 @@ def maxTabel(x,y,arah,total):
             
     random.shuffle(temp) 
     if temp[0] == 'N' :
+        perjalanan.append([index,'N',index-15])
         y-=1
     elif temp[0] == 'S' :
+        perjalanan.append([index,'S',index+15])
         y+=1
     elif temp[0] == 'E' :
+        perjalanan.append([index,'E',index+1])
         x+=1
     elif temp[0] == 'W' :
+        perjalanan.append([index,'W',index-1])
         x-=1
     return x,y,total
 
 
 # # Hasil Akhir 
 
-# In[109]:
+# In[56]:
 
 
 x = 0
 y = 14
 total = 0
 state = []
+perjalanan,nomor = [],[]
 while (x!=14) or (y!=0):
     state.append([x,y])
     arah = PossibleA(x,y)
@@ -207,12 +210,17 @@ while (x!=14) or (y!=0):
     arah = PossibleA2(x,y,arah)
 
     x,y,total = maxTabel(x,y,arah,total)
-print (x,y)
-print (total)
+print('Titik Akhir ',x,y)
+print('Total ',total)
 
 
-# In[ ]:
+# In[57]:
 
 
+df = pd.DataFrame(perjalanan).T
 
+header = df.iloc[0]
+df = df[1:]
+df = df.rename(columns = header)
+df
 
