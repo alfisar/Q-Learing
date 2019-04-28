@@ -13115,13 +13115,13 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">random</span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;DataTugas3ML2019.csv&#39;</span><span class="p">,</span><span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;DataTugas3ML2019.txt&#39;</span><span class="p">,</span><span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.max_columns&quot;</span><span class="p">,</span> <span class="mi">225</span><span class="p">)</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_colwidth&#39;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
 <span class="n">data</span>
@@ -13137,7 +13137,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[36]:</div>
 
 
 
@@ -13468,7 +13468,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[238]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">PossibleA</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
@@ -13509,7 +13509,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[239]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">jalan</span><span class="p">(</span><span class="n">arah</span><span class="p">):</span>
@@ -13517,11 +13517,11 @@ div#notebook {
 <span class="c1">#     print(arah)</span>
     <span class="k">if</span><span class="p">(</span><span class="n">arahsblm</span> <span class="o">==</span> <span class="s1">&#39;N&#39;</span><span class="p">):</span>
         <span class="n">arah</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">)</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">arahsblm</span> <span class="o">==</span> <span class="s1">&#39;S&#39;</span><span class="p">):</span>
+    <span class="k">elif</span><span class="p">(</span><span class="n">arahsblm</span> <span class="o">==</span> <span class="s1">&#39;S&#39;</span><span class="p">):</span>
         <span class="n">arah</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">)</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">arahsblm</span> <span class="o">==</span> <span class="s1">&#39;E&#39;</span><span class="p">):</span>
+    <span class="k">elif</span><span class="p">(</span><span class="n">arahsblm</span> <span class="o">==</span> <span class="s1">&#39;E&#39;</span><span class="p">):</span>
         <span class="n">arah</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;W&#39;</span><span class="p">)</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">arahsblm</span> <span class="o">==</span> <span class="s1">&#39;W&#39;</span><span class="p">):</span>
+    <span class="k">elif</span><span class="p">(</span><span class="n">arahsblm</span> <span class="o">==</span> <span class="s1">&#39;W&#39;</span><span class="p">):</span>
         <span class="n">arah</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">)</span>
         
     <span class="k">return</span> <span class="n">arah</span>
@@ -13534,23 +13534,23 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[240]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">pemilihanjalan</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">arah</span><span class="p">):</span>
     <span class="n">index</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="mi">15</span>
     <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">arah</span><span class="p">)</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">arah</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;N&#39;</span><span class="p">):</span>
-        <span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;N&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;N&#39;</span><span class="p">]</span><span class="o">+</span><span class="p">(</span><span class="n">alfa</span><span class="o">*</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">gamma</span><span class="o">*</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="o">-</span><span class="mi">15</span><span class="p">])</span><span class="o">-</span><span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;N&#39;</span><span class="p">])))</span>
+        <span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;N&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;N&#39;</span><span class="p">]</span><span class="o">+</span><span class="p">(</span><span class="n">alfa</span><span class="o">*</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">gamma</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="o">-</span><span class="mi">15</span><span class="p">])</span><span class="o">-</span><span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;N&#39;</span><span class="p">]))</span>
         <span class="n">y</span><span class="o">-=</span><span class="mi">1</span>
     <span class="k">elif</span> <span class="p">(</span><span class="n">arah</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;S&#39;</span><span class="p">):</span>
-        <span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;S&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;S&#39;</span><span class="p">]</span><span class="o">+</span><span class="p">(</span><span class="n">alfa</span><span class="o">*</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">gamma</span><span class="o">*</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="o">+</span><span class="mi">15</span><span class="p">])</span><span class="o">-</span><span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;S&#39;</span><span class="p">])))</span> 
+        <span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;S&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;S&#39;</span><span class="p">]</span><span class="o">+</span><span class="p">(</span><span class="n">alfa</span><span class="o">*</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">gamma</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="o">+</span><span class="mi">15</span><span class="p">])</span><span class="o">-</span><span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;S&#39;</span><span class="p">]))</span> 
         <span class="n">y</span><span class="o">+=</span><span class="mi">1</span>
     <span class="k">elif</span><span class="p">(</span><span class="n">arah</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;W&#39;</span><span class="p">):</span>
-        <span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;W&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;W&#39;</span><span class="p">]</span><span class="o">+</span><span class="p">(</span><span class="n">alfa</span><span class="o">*</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">y</span><span class="p">]</span><span class="o">+</span><span class="n">gamma</span><span class="o">*</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">-</span><span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;W&#39;</span><span class="p">])))</span>
+        <span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;W&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;W&#39;</span><span class="p">]</span><span class="o">+</span><span class="p">(</span><span class="n">alfa</span><span class="o">*</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">y</span><span class="p">]</span><span class="o">+</span><span class="n">gamma</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">-</span><span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;W&#39;</span><span class="p">]))</span>
         <span class="n">x</span><span class="o">-=</span><span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;E&#39;</span><span class="p">]</span><span class="o">+</span><span class="p">(</span><span class="n">alfa</span><span class="o">*</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">y</span><span class="p">]</span><span class="o">+</span><span class="n">gamma</span><span class="o">*</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">-</span><span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;E&#39;</span><span class="p">])))</span>
+        <span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;E&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;E&#39;</span><span class="p">]</span><span class="o">+</span><span class="p">(</span><span class="n">alfa</span><span class="o">*</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">y</span><span class="p">]</span><span class="o">+</span><span class="n">gamma</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">-</span><span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s1">&#39;E&#39;</span><span class="p">]))</span>
         <span class="n">x</span><span class="o">+=</span><span class="mi">1</span>
 <span class="c1">#     print(arah[0])</span>
     <span class="k">return</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">arah</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -13563,7 +13563,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[174]:</div>
+<div class="prompt input_prompt">In&nbsp;[378]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">TabelQ</span> <span class="o">=</span> <span class="p">[]</span>
@@ -13587,7 +13587,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[174]:</div>
+    <div class="prompt output_prompt">Out[378]:</div>
 
 
 
@@ -14763,20 +14763,20 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[175]:</div>
+<div class="prompt input_prompt">In&nbsp;[379]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">alfa</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">gamma</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">gamma</span> <span class="o">=</span> <span class="mf">0.8</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">14</span>
 <span class="n">arahsblm</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 
-<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">18</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">episode</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">500</span><span class="p">):</span><span class="c1"># jika pada saat hasil akhir di run tidak kluar hasilnya silahkan perbesar episodenya</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">y</span> <span class="o">=</span> <span class="mi">14</span>
     <span class="n">arahsblm</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">220</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">200</span><span class="p">):</span>
         <span class="n">arah</span> <span class="o">=</span> <span class="n">PossibleA</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
         <span class="n">arah</span> <span class="o">=</span> <span class="n">jalan</span><span class="p">(</span><span class="n">arah</span><span class="p">)</span>
         <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">arahsblm</span> <span class="o">=</span> <span class="n">pemilihanjalan</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">arah</span><span class="p">)</span>
@@ -14793,7 +14793,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[175]:</div>
+    <div class="prompt output_prompt">Out[379]:</div>
 
 
 
@@ -15046,454 +15046,454 @@ div#notebook {
   <tbody>
     <tr>
       <th>N</th>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.000</td>
-      <td>0.00000</td>
-      <td>0.000000</td>
-      <td>0.0000</td>
-      <td>0.00000</td>
-      <td>0.0000</td>
-      <td>0.000</td>
-      <td>0.0000</td>
-      <td>0.0</td>
-      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>-1.5</td>
-      <td>-3.000</td>
-      <td>-5.625</td>
-      <td>-2.000000</td>
-      <td>-5.976562</td>
-      <td>-5.8125</td>
-      <td>-7.000</td>
-      <td>-1.75</td>
-      <td>-7.00</td>
-      <td>-3.50000</td>
-      <td>129.250000</td>
-      <td>191.000000</td>
-      <td>212.93750</td>
-      <td>247.000000</td>
-      <td>1457.093750</td>
-      <td>-1.0</td>
-      <td>-4.5</td>
-      <td>-2.375</td>
-      <td>-4.46875</td>
-      <td>-7.9375</td>
-      <td>-1.0000</td>
-      <td>-6.00</td>
-      <td>-1.875000</td>
-      <td>-7.00000</td>
-      <td>26.687500</td>
-      <td>81.773438</td>
-      <td>-4.250000</td>
-      <td>-3.000000</td>
-      <td>780.242188</td>
-      <td>1291.296875</td>
-      <td>-6.0</td>
-      <td>-2.00</td>
-      <td>0.0</td>
-      <td>-7.750</td>
-      <td>-4.87500</td>
-      <td>-2.375000</td>
-      <td>-3.750000</td>
-      <td>-8.812500</td>
-      <td>-3.00000</td>
       <td>0.000000</td>
-      <td>23.921875</td>
-      <td>7.199219</td>
-      <td>-3.000000</td>
-      <td>-8.750000</td>
-      <td>958.390625</td>
-      <td>-7.0</td>
-      <td>-3.000</td>
-      <td>-4.000000</td>
-      <td>0.00000</td>
-      <td>-8.777344</td>
-      <td>-6.12500</td>
-      <td>-7.906250</td>
-      <td>-6.294922</td>
-      <td>-10.671875</td>
-      <td>-3.75</td>
-      <td>-4.000000</td>
-      <td>-3.000</td>
-      <td>-3.50000</td>
-      <td>95.90625</td>
-      <td>585.03125</td>
-      <td>-6.000000</td>
-      <td>-3.750000</td>
-      <td>-6.375000</td>
-      <td>-5.250000</td>
-      <td>-5.750000</td>
-      <td>-7.931641</td>
-      <td>-4.072266</td>
-      <td>-1.500</td>
-      <td>-6.750</td>
-      <td>-4.50</td>
-      <td>-1.0000</td>
-      <td>-6.687500</td>
-      <td>0.000</td>
-      <td>-2.00000</td>
-      <td>214.234375</td>
-      <td>-7.937500</td>
-      <td>-8.937500</td>
-      <td>-10.683594</td>
-      <td>-11.960938</td>
-      <td>-5.625000</td>
-      <td>-5.976562</td>
-      <td>-7.9375</td>
-      <td>-3.750</td>
-      <td>-4.00000</td>
-      <td>-3.71875</td>
-      <td>-2.687500</td>
-      <td>-5.437500</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>50.382235</td>
+      <td>64.227794</td>
+      <td>82.784742</td>
+      <td>107.231039</td>
+      <td>136.538799</td>
+      <td>174.423498</td>
+      <td>221.779373</td>
+      <td>282.224216</td>
+      <td>354.030270</td>
+      <td>447.537838</td>
+      <td>561.922298</td>
+      <td>703.652872</td>
+      <td>882.066090</td>
+      <td>1106.332872</td>
+      <td>1386.666090</td>
+      <td>39.305788</td>
+      <td>50.076187</td>
+      <td>66.345234</td>
+      <td>84.181542</td>
+      <td>107.726927</td>
+      <td>139.658659</td>
+      <td>175.823498</td>
+      <td>224.779373</td>
+      <td>280.824216</td>
+      <td>356.030270</td>
+      <td>446.069038</td>
+      <td>562.586298</td>
+      <td>705.732872</td>
+      <td>884.666298</td>
+      <td>1108.332872</td>
+      <td>27.728760</td>
+      <td>39.660949</td>
+      <td>52.076187</td>
+      <td>65.265234</td>
+      <td>86.581542</td>
+      <td>110.726927</td>
+      <td>138.658799</td>
+      <td>175.823498</td>
+      <td>224.243348</td>
+      <td>282.804184</td>
+      <td>357.255230</td>
+      <td>449.069038</td>
+      <td>562.586298</td>
+      <td>703.733038</td>
+      <td>882.666298</td>
+      <td>19.783008</td>
+      <td>29.728760</td>
+      <td>37.660949</td>
+      <td>52.012187</td>
+      <td>66.265234</td>
+      <td>86.581542</td>
+      <td>107.927039</td>
+      <td>138.658799</td>
+      <td>175.394678</td>
+      <td>224.243348</td>
+      <td>282.604184</td>
+      <td>358.255098</td>
+      <td>448.069038</td>
+      <td>559.306090</td>
+      <td>704.132613</td>
+      <td>13.426406</td>
+      <td>21.783008</td>
+      <td>28.887800</td>
+      <td>38.609749</td>
+      <td>51.368182</td>
+      <td>66.710227</td>
+      <td>87.137784</td>
+      <td>110.172230</td>
+      <td>138.965288</td>
+      <td>178.70661</td>
+      <td>225.883262</td>
+      <td>283.604078</td>
+      <td>354.455230</td>
+      <td>445.444872</td>
+      <td>559.306090</td>
+      <td>7.541125</td>
+      <td>14.426406</td>
+      <td>20.110240</td>
+      <td>27.275614</td>
+      <td>39.094546</td>
+      <td>50.368182</td>
+      <td>66.215827</td>
+      <td>87.769784</td>
+      <td>112.212230</td>
+      <td>142.765288</td>
+      <td>179.70661</td>
+      <td>224.883262</td>
+      <td>283.124718</td>
+      <td>355.155898</td>
+      <td>446.444872</td>
+      <td>6.406660</td>
+      <td>10.508325</td>
+      <td>16.885406</td>
+      <td>23.606757</td>
+      <td>30.758504</td>
+      <td>39.698130</td>
+      <td>53.372662</td>
+      <td>69.215827</td>
+      <td>85.769784</td>
+      <td>111.212230</td>
+      <td>142.765288</td>
+      <td>178.906610</td>
+      <td>224.499774</td>
+      <td>281.124718</td>
+      <td>354.155898</td>
+      <td>4.205328</td>
+      <td>9.006660</td>
+      <td>12.508325</td>
+      <td>14.885406</td>
+      <td>20.606757</td>
+      <td>30.358504</td>
+      <td>41.698130</td>
+      <td>53.372662</td>
+      <td>68.655827</td>
+      <td>89.569784</td>
+      <td>113.212230</td>
+      <td>139.125288</td>
+      <td>175.599820</td>
+      <td>221.899774</td>
+      <td>280.324718</td>
+      <td>1.964262</td>
+      <td>6.205328</td>
+      <td>6.006660</td>
+      <td>10.247554</td>
+      <td>15.309442</td>
+      <td>22.886803</td>
+      <td>32.358504</td>
+      <td>38.698130</td>
+      <td>50.924662</td>
+      <td>67.655827</td>
+      <td>88.569784</td>
+      <td>109.429005</td>
+      <td>139.286256</td>
+      <td>176.607820</td>
+      <td>223.259774</td>
+      <td>-1.428590</td>
+      <td>0.964262</td>
+      <td>0.958434</td>
+      <td>6.198043</td>
+      <td>9.247554</td>
+      <td>14.309442</td>
+      <td>22.886803</td>
+      <td>28.862184</td>
+      <td>39.827730</td>
+      <td>52.284662</td>
+      <td>67.855827</td>
+      <td>83.543204</td>
+      <td>108.429005</td>
+      <td>138.086171</td>
+      <td>177.607820</td>
+      <td>-3.0</td>
+      <td>-2.164214</td>
+      <td>2.294733</td>
+      <td>4.118416</td>
+      <td>6.398020</td>
+      <td>7.447554</td>
+      <td>14.309442</td>
+      <td>19.089747</td>
+      <td>28.662184</td>
+      <td>40.827730</td>
+      <td>52.284662</td>
+      <td>65.356119</td>
+      <td>86.695149</td>
+      <td>110.868937</td>
+      <td>141.086171</td>
       <td>-1.000000</td>
-      <td>10.296875</td>
-      <td>-1.750000</td>
-      <td>-3.96875</td>
-      <td>-8.703125</td>
-      <td>-6.796875</td>
-      <td>-5.242188</td>
-      <td>-4.132812</td>
-      <td>-5.906250</td>
-      <td>-5.093750</td>
-      <td>-1.000000</td>
-      <td>-8.375000</td>
-      <td>-5.81250</td>
-      <td>-3.187500</td>
-      <td>-4.755859</td>
-      <td>-2.000000</td>
-      <td>-1.304688</td>
-      <td>-5.625000</td>
-      <td>-5.906250</td>
-      <td>-3.406250</td>
-      <td>-4.281250</td>
-      <td>-11.148438</td>
-      <td>-9.500000</td>
-      <td>-10.119141</td>
-      <td>-3.812500</td>
-      <td>-4.867188</td>
-      <td>-9.996094</td>
-      <td>-4.484375</td>
-      <td>-3.000000</td>
-      <td>-8.937500</td>
-      <td>-8.500000</td>
-      <td>-8.765625</td>
-      <td>-5.906250</td>
-      <td>-5.812500</td>
-      <td>-4.359375</td>
-      <td>-6.140625</td>
-      <td>-8.355469</td>
-      <td>-9.851562</td>
-      <td>-9.289062</td>
-      <td>-5.656250</td>
-      <td>-10.437500</td>
-      <td>-13.484375</td>
-      <td>-9.781250</td>
-      <td>-6.601562</td>
-      <td>-7.500000</td>
-      <td>-4.937500</td>
-      <td>-5.71875</td>
-      <td>-1.96875</td>
-      <td>-5.625</td>
-      <td>-6.000000</td>
-      <td>-7.000000</td>
-      <td>-6.234375</td>
-      <td>-7.840820</td>
-      <td>-13.906250</td>
-      <td>-7.843750</td>
-      <td>-8.1250</td>
-      <td>-9.070312</td>
-      <td>-5.718750</td>
-      <td>-11.593994</td>
-      <td>-14.968750</td>
-      <td>-9.359375</td>
-      <td>-9.1875</td>
-      <td>-1.96875</td>
-      <td>-5.994141</td>
-      <td>-11.312500</td>
-      <td>-4.515625</td>
-      <td>-2.953125</td>
-      <td>-3.906250</td>
-      <td>-12.048828</td>
-      <td>-9.250000</td>
-      <td>-11.34375</td>
-      <td>-9.953125</td>
-      <td>-5.589844</td>
-      <td>-8.160156</td>
-      <td>-12.722656</td>
-      <td>-5.660156</td>
-      <td>-4.87500</td>
-      <td>-1.9375</td>
-      <td>-1.992188</td>
-      <td>-7.962646</td>
-      <td>-6.998291</td>
-      <td>-7.382812</td>
-      <td>-8.387695</td>
-      <td>-8.43750</td>
-      <td>-4.500000</td>
-      <td>-11.015625</td>
-      <td>-11.648438</td>
-      <td>-5.617188</td>
-      <td>-4.625000</td>
-      <td>-10.125000</td>
-      <td>-5.304688</td>
-      <td>-6.21875</td>
-      <td>-7.87500</td>
-      <td>-3.998047</td>
-      <td>-7.946106</td>
-      <td>-5.931396</td>
-      <td>-5.875000</td>
-      <td>-8.383301</td>
-      <td>-4.000</td>
-      <td>-10.40625</td>
-      <td>-7.500000</td>
-      <td>-8.179688</td>
-      <td>-10.351562</td>
-      <td>-4.093750</td>
-      <td>-11.390625</td>
-      <td>-2.000000</td>
-      <td>-7.71875</td>
-      <td>-3.968750</td>
-      <td>-3.999998</td>
-      <td>-5.820312</td>
-      <td>-7.990936</td>
-      <td>-7.769043</td>
-      <td>-11.754883</td>
-      <td>-8.00000</td>
-      <td>-3.75000</td>
-      <td>-7.863281</td>
-      <td>-5.68750</td>
-      <td>-3.00000</td>
-      <td>-2.593750</td>
-      <td>-7.062500</td>
-      <td>-7.320312</td>
-      <td>-9.531250</td>
-      <td>-5.953125</td>
+      <td>-3.800000</td>
+      <td>-1.164214</td>
+      <td>0.294733</td>
+      <td>2.118416</td>
+      <td>3.758043</td>
+      <td>8.447525</td>
+      <td>14.063798</td>
+      <td>21.329747</td>
+      <td>31.662184</td>
+      <td>39.827702</td>
+      <td>50.684896</td>
+      <td>68.356119</td>
+      <td>86.695149</td>
+      <td>108.868937</td>
+      <td>-2.0</td>
+      <td>-3.545097</td>
+      <td>-1.931371</td>
+      <td>-1.764214</td>
+      <td>-0.305267</td>
+      <td>1.104664</td>
+      <td>3.880830</td>
+      <td>9.851038</td>
+      <td>16.063798</td>
+      <td>21.329747</td>
+      <td>30.862161</td>
+      <td>38.147916</td>
+      <td>52.684896</td>
+      <td>67.356119</td>
+      <td>85.095149</td>
+      <td>-2.0</td>
+      <td>-2.6</td>
+      <td>-3.8</td>
+      <td>-2.411371</td>
+      <td>-4.244214</td>
+      <td>-0.902959</td>
+      <td>3.871302</td>
+      <td>6.089127</td>
+      <td>11.361409</td>
+      <td>17.951761</td>
+      <td>23.689701</td>
+      <td>29.318333</td>
+      <td>39.147916</td>
+      <td>49.884896</td>
+      <td>65.076119</td>
     </tr>
     <tr>
       <th>S</th>
-      <td>-1.0</td>
-      <td>-4.5</td>
-      <td>-2.375</td>
-      <td>-5.46875</td>
-      <td>-6.000000</td>
-      <td>-1.9375</td>
-      <td>-6.00000</td>
-      <td>-1.8750</td>
-      <td>-7.500</td>
-      <td>24.9375</td>
-      <td>-6.5</td>
-      <td>100.09375</td>
-      <td>108.828125</td>
-      <td>338.250000</td>
-      <td>1046.078125</td>
-      <td>-4.0</td>
-      <td>-2.000</td>
-      <td>-2.875</td>
-      <td>-9.500000</td>
-      <td>-4.250000</td>
-      <td>-2.3750</td>
-      <td>0.000</td>
-      <td>0.00</td>
-      <td>-3.75</td>
-      <td>8.84375</td>
-      <td>7.796875</td>
-      <td>-2.750000</td>
-      <td>-5.37500</td>
-      <td>-5.000000</td>
-      <td>995.203125</td>
-      <td>-7.0</td>
+      <td>39.305788</td>
+      <td>50.076187</td>
+      <td>66.345234</td>
+      <td>84.181542</td>
+      <td>107.726927</td>
+      <td>139.658659</td>
+      <td>175.823324</td>
+      <td>224.779373</td>
+      <td>280.824216</td>
+      <td>356.030270</td>
+      <td>446.069038</td>
+      <td>562.586090</td>
+      <td>705.732872</td>
+      <td>884.666298</td>
+      <td>1108.332872</td>
+      <td>27.728760</td>
+      <td>39.660949</td>
+      <td>52.076187</td>
+      <td>65.265234</td>
+      <td>86.581542</td>
+      <td>110.726927</td>
+      <td>138.658799</td>
+      <td>175.823498</td>
+      <td>224.243348</td>
+      <td>282.804184</td>
+      <td>357.255230</td>
+      <td>449.069038</td>
+      <td>562.586298</td>
+      <td>703.732872</td>
+      <td>882.666298</td>
+      <td>19.783008</td>
+      <td>29.728760</td>
+      <td>37.660949</td>
+      <td>52.012187</td>
+      <td>66.265234</td>
+      <td>86.581542</td>
+      <td>107.926927</td>
+      <td>138.658799</td>
+      <td>175.394678</td>
+      <td>224.243348</td>
+      <td>282.604078</td>
+      <td>358.255098</td>
+      <td>448.069038</td>
+      <td>559.306090</td>
+      <td>704.133038</td>
+      <td>13.426406</td>
+      <td>21.783008</td>
+      <td>28.887800</td>
+      <td>38.609749</td>
+      <td>51.368182</td>
+      <td>66.710227</td>
+      <td>87.137784</td>
+      <td>110.172230</td>
+      <td>138.965288</td>
+      <td>178.706610</td>
+      <td>225.883262</td>
+      <td>283.604078</td>
+      <td>354.455098</td>
+      <td>445.444872</td>
+      <td>559.306090</td>
+      <td>7.541125</td>
+      <td>14.426406</td>
+      <td>20.110240</td>
+      <td>27.275614</td>
+      <td>39.094546</td>
+      <td>50.368182</td>
+      <td>66.215827</td>
+      <td>87.769784</td>
+      <td>112.212230</td>
+      <td>142.765288</td>
+      <td>179.706610</td>
+      <td>224.883262</td>
+      <td>283.124718</td>
+      <td>355.155898</td>
+      <td>446.444872</td>
+      <td>6.406660</td>
+      <td>10.508325</td>
+      <td>16.885406</td>
+      <td>23.606757</td>
+      <td>30.758447</td>
+      <td>39.698130</td>
+      <td>53.372662</td>
+      <td>69.215827</td>
+      <td>85.769784</td>
+      <td>111.21223</td>
+      <td>142.765288</td>
+      <td>178.906610</td>
+      <td>224.499774</td>
+      <td>281.124718</td>
+      <td>354.155898</td>
+      <td>4.205328</td>
+      <td>9.006660</td>
+      <td>12.508325</td>
+      <td>14.885406</td>
+      <td>20.606757</td>
+      <td>30.358504</td>
+      <td>41.698130</td>
+      <td>53.372662</td>
+      <td>68.655827</td>
+      <td>89.569784</td>
+      <td>113.21223</td>
+      <td>139.125288</td>
+      <td>175.599820</td>
+      <td>221.899774</td>
+      <td>280.324718</td>
+      <td>1.964262</td>
+      <td>6.205328</td>
+      <td>6.006660</td>
+      <td>10.247525</td>
+      <td>15.309406</td>
+      <td>22.886803</td>
+      <td>32.358504</td>
+      <td>38.698130</td>
+      <td>50.924662</td>
+      <td>67.655827</td>
+      <td>88.569784</td>
+      <td>109.429005</td>
+      <td>139.286256</td>
+      <td>176.607820</td>
+      <td>223.259774</td>
+      <td>-1.428590</td>
+      <td>0.964262</td>
+      <td>0.958416</td>
+      <td>6.198043</td>
+      <td>9.247525</td>
+      <td>14.309442</td>
+      <td>22.886803</td>
+      <td>28.862184</td>
+      <td>39.827730</td>
+      <td>52.284662</td>
+      <td>67.855827</td>
+      <td>83.543204</td>
+      <td>108.429005</td>
+      <td>138.086171</td>
+      <td>177.607713</td>
+      <td>-3.000000</td>
+      <td>-2.164214</td>
+      <td>2.294733</td>
+      <td>4.118416</td>
+      <td>6.398043</td>
+      <td>7.447525</td>
+      <td>14.309442</td>
+      <td>19.089747</td>
+      <td>28.662184</td>
+      <td>40.827730</td>
+      <td>52.284662</td>
+      <td>65.356119</td>
+      <td>86.695204</td>
+      <td>110.868937</td>
+      <td>141.086256</td>
+      <td>-1.000000</td>
+      <td>-3.800000</td>
+      <td>-1.164214</td>
+      <td>0.294733</td>
+      <td>2.118416</td>
+      <td>3.758020</td>
+      <td>8.447525</td>
+      <td>14.063798</td>
+      <td>21.329729</td>
+      <td>31.662184</td>
+      <td>39.827702</td>
+      <td>50.684896</td>
+      <td>68.356119</td>
+      <td>86.695149</td>
+      <td>108.868937</td>
+      <td>-2.0</td>
+      <td>-3.545097</td>
+      <td>-1.931371</td>
+      <td>-1.764214</td>
+      <td>-0.305267</td>
+      <td>1.104664</td>
+      <td>3.880807</td>
+      <td>9.851038</td>
+      <td>16.063798</td>
+      <td>21.329747</td>
+      <td>30.862161</td>
+      <td>38.147916</td>
+      <td>52.684896</td>
+      <td>67.356119</td>
+      <td>85.095149</td>
+      <td>-2.000000</td>
+      <td>-2.600000</td>
+      <td>-3.800000</td>
+      <td>-2.411371</td>
+      <td>-4.244214</td>
+      <td>-0.902959</td>
+      <td>3.871302</td>
+      <td>6.089127</td>
+      <td>11.361409</td>
+      <td>17.951761</td>
+      <td>23.689701</td>
+      <td>29.318333</td>
+      <td>39.147916</td>
+      <td>49.884896</td>
+      <td>65.076119</td>
+      <td>-2.0</td>
+      <td>-2.000000</td>
+      <td>-1.000000</td>
+      <td>-4.000000</td>
+      <td>-4.000000</td>
+      <td>-2.943167</td>
+      <td>1.321041</td>
+      <td>4.151302</td>
+      <td>7.689127</td>
+      <td>13.361409</td>
+      <td>16.951761</td>
+      <td>22.254666</td>
+      <td>30.318333</td>
+      <td>38.907916</td>
+      <td>49.060896</td>
       <td>0.0</td>
-      <td>-7.000</td>
-      <td>-3.00000</td>
-      <td>-5.8750</td>
-      <td>-4.9375</td>
-      <td>-5.25</td>
-      <td>-3.125000</td>
-      <td>-9.00000</td>
-      <td>-3.000000</td>
-      <td>-6.000000</td>
-      <td>-3.125000</td>
-      <td>-4.250000</td>
-      <td>147.359375</td>
-      <td>550.375000</td>
-      <td>-6.0</td>
-      <td>-6.25</td>
-      <td>-3.0</td>
-      <td>-5.250</td>
-      <td>-5.50000</td>
-      <td>-7.265625</td>
-      <td>-3.304688</td>
-      <td>-4.214844</td>
-      <td>-4.50000</td>
-      <td>-4.500000</td>
-      <td>-3.304688</td>
-      <td>-4.500000</td>
-      <td>-6.000000</td>
-      <td>68.429688</td>
-      <td>214.234375</td>
-      <td>-6.0</td>
-      <td>-9.125</td>
-      <td>-10.296875</td>
-      <td>-10.65625</td>
-      <td>-5.375000</td>
-      <td>-3.00000</td>
-      <td>-6.000000</td>
-      <td>-3.750000</td>
-      <td>-2.000000</td>
-      <td>-1.50</td>
-      <td>-1.500000</td>
-      <td>-4.625</td>
-      <td>-1.75000</td>
-      <td>-3.00000</td>
-      <td>27.90625</td>
-      <td>-3.875000</td>
-      <td>-7.312500</td>
-      <td>-5.804688</td>
-      <td>-5.257812</td>
-      <td>-3.750000</td>
-      <td>0.000000</td>
-      <td>-4.125000</td>
-      <td>-3.375</td>
-      <td>-4.000</td>
-      <td>-3.00</td>
-      <td>-3.8750</td>
-      <td>-5.564453</td>
-      <td>-4.625</td>
-      <td>-4.50000</td>
-      <td>-5.812500</td>
-      <td>-5.625000</td>
-      <td>-3.421875</td>
-      <td>-4.500000</td>
-      <td>-9.906250</td>
-      <td>-8.000000</td>
-      <td>-4.960938</td>
-      <td>-3.2500</td>
-      <td>-4.375</td>
-      <td>-7.09375</td>
-      <td>0.00000</td>
-      <td>-2.250000</td>
-      <td>-9.640625</td>
-      <td>-9.375000</td>
-      <td>-7.964844</td>
-      <td>-5.250000</td>
-      <td>-5.81250</td>
-      <td>-5.226562</td>
-      <td>-11.425781</td>
-      <td>-8.078125</td>
-      <td>-8.437500</td>
-      <td>-7.500000</td>
-      <td>-5.675781</td>
-      <td>-12.218750</td>
-      <td>-10.031250</td>
-      <td>-4.96875</td>
-      <td>-6.578125</td>
-      <td>-9.929688</td>
-      <td>-6.632812</td>
-      <td>-4.687500</td>
-      <td>-1.875000</td>
-      <td>-3.000000</td>
-      <td>-9.554688</td>
-      <td>-7.984375</td>
-      <td>-5.000000</td>
-      <td>-5.000000</td>
-      <td>-13.568359</td>
-      <td>-9.796875</td>
-      <td>-11.613281</td>
-      <td>-7.062500</td>
-      <td>-5.187500</td>
-      <td>-11.304688</td>
-      <td>-14.828125</td>
-      <td>-8.968750</td>
-      <td>-6.750000</td>
-      <td>-1.984375</td>
-      <td>-3.000000</td>
-      <td>-7.750000</td>
-      <td>-3.351562</td>
-      <td>-2.625000</td>
-      <td>-2.812500</td>
-      <td>-11.972656</td>
-      <td>-12.296875</td>
-      <td>-8.250000</td>
-      <td>-8.250000</td>
-      <td>-7.241455</td>
-      <td>-8.441406</td>
-      <td>-12.976562</td>
-      <td>-4.812500</td>
-      <td>-5.46875</td>
-      <td>-1.87500</td>
-      <td>-1.750</td>
-      <td>-7.948242</td>
-      <td>-7.663086</td>
-      <td>-7.875000</td>
-      <td>-9.324219</td>
-      <td>-6.750000</td>
-      <td>-8.812500</td>
-      <td>-4.5000</td>
-      <td>-10.992188</td>
-      <td>-5.886719</td>
-      <td>-6.968750</td>
-      <td>-11.250000</td>
-      <td>-1.750000</td>
-      <td>-6.0000</td>
-      <td>-7.00000</td>
-      <td>-3.937500</td>
-      <td>-5.726562</td>
-      <td>-4.934570</td>
-      <td>-7.343750</td>
-      <td>-7.117188</td>
-      <td>-7.375000</td>
-      <td>-9.500000</td>
-      <td>-6.37500</td>
-      <td>-5.546875</td>
-      <td>-10.919922</td>
-      <td>-5.031250</td>
-      <td>-10.687500</td>
-      <td>-3.750000</td>
-      <td>-6.46875</td>
-      <td>-3.7500</td>
-      <td>-3.996094</td>
-      <td>-5.609375</td>
-      <td>-7.973328</td>
-      <td>-6.992188</td>
-      <td>-10.635742</td>
-      <td>-11.46875</td>
-      <td>-2.500000</td>
-      <td>-5.812500</td>
-      <td>-8.234375</td>
-      <td>-3.359375</td>
-      <td>-4.375000</td>
-      <td>-7.091797</td>
-      <td>-7.601562</td>
-      <td>-7.25000</td>
-      <td>-5.90625</td>
-      <td>-3.996094</td>
-      <td>-3.998047</td>
-      <td>-1.999878</td>
-      <td>-7.968750</td>
-      <td>-7.500000</td>
-      <td>-7.500</td>
-      <td>-3.75000</td>
-      <td>-2.000000</td>
-      <td>-5.812500</td>
-      <td>-1.750000</td>
-      <td>-3.984375</td>
-      <td>-3.750000</td>
-      <td>-1.968750</td>
-      <td>-1.96875</td>
-      <td>-5.250000</td>
+      <td>0.0</td>
+      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.00000</td>
-      <td>0.00000</td>
       <td>0.000000</td>
-      <td>0.00000</td>
-      <td>0.00000</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -15502,459 +15502,459 @@ div#notebook {
     </tr>
     <tr>
       <th>E</th>
-      <td>-3.0</td>
-      <td>-3.0</td>
-      <td>-3.875</td>
-      <td>-4.50000</td>
-      <td>-5.953125</td>
-      <td>-7.8750</td>
-      <td>-1.96875</td>
-      <td>-7.9375</td>
-      <td>-3.875</td>
-      <td>-1.7500</td>
-      <td>191.0</td>
-      <td>364.03125</td>
-      <td>719.250000</td>
-      <td>1350.453125</td>
+      <td>64.227794</td>
+      <td>82.784742</td>
+      <td>107.230927</td>
+      <td>136.538799</td>
+      <td>174.423498</td>
+      <td>221.779373</td>
+      <td>282.224216</td>
+      <td>354.030270</td>
+      <td>447.537838</td>
+      <td>561.922298</td>
+      <td>703.652872</td>
+      <td>882.066090</td>
+      <td>1106.332872</td>
+      <td>1386.666090</td>
       <td>0.000000</td>
-      <td>-3.0</td>
-      <td>-2.375</td>
-      <td>-5.000</td>
-      <td>-7.500000</td>
-      <td>-1.000000</td>
-      <td>0.0000</td>
-      <td>-1.500</td>
-      <td>-8.25</td>
-      <td>-3.00</td>
-      <td>57.37500</td>
-      <td>82.531250</td>
-      <td>15.171875</td>
-      <td>417.96875</td>
-      <td>1147.515625</td>
+      <td>50.076187</td>
+      <td>66.345234</td>
+      <td>84.181542</td>
+      <td>107.726927</td>
+      <td>139.658659</td>
+      <td>175.823324</td>
+      <td>224.779373</td>
+      <td>280.824216</td>
+      <td>356.030270</td>
+      <td>446.069038</td>
+      <td>562.586298</td>
+      <td>705.732872</td>
+      <td>884.666090</td>
+      <td>1108.332872</td>
+      <td>0.000000</td>
+      <td>39.660949</td>
+      <td>52.076187</td>
+      <td>65.265234</td>
+      <td>86.581542</td>
+      <td>110.726927</td>
+      <td>138.658799</td>
+      <td>175.823498</td>
+      <td>224.243348</td>
+      <td>282.804184</td>
+      <td>357.255230</td>
+      <td>449.069038</td>
+      <td>562.586298</td>
+      <td>703.733038</td>
+      <td>882.666298</td>
+      <td>0.000000</td>
+      <td>29.728760</td>
+      <td>37.660949</td>
+      <td>52.012187</td>
+      <td>66.265234</td>
+      <td>86.581542</td>
+      <td>107.926927</td>
+      <td>138.658659</td>
+      <td>175.394678</td>
+      <td>224.243348</td>
+      <td>282.604184</td>
+      <td>358.255230</td>
+      <td>448.068872</td>
+      <td>559.306090</td>
+      <td>704.132613</td>
+      <td>0.000000</td>
+      <td>21.783008</td>
+      <td>28.887800</td>
+      <td>38.609749</td>
+      <td>51.368182</td>
+      <td>66.710227</td>
+      <td>87.137784</td>
+      <td>110.172230</td>
+      <td>138.965288</td>
+      <td>178.706610</td>
+      <td>225.883262</td>
+      <td>283.604078</td>
+      <td>354.455230</td>
+      <td>445.444872</td>
+      <td>559.306090</td>
+      <td>0.000000</td>
+      <td>14.426406</td>
+      <td>20.110240</td>
+      <td>27.275614</td>
+      <td>39.094546</td>
+      <td>50.368182</td>
+      <td>66.215827</td>
+      <td>87.769784</td>
+      <td>112.212230</td>
+      <td>142.765288</td>
+      <td>179.70661</td>
+      <td>224.883262</td>
+      <td>283.124718</td>
+      <td>355.155898</td>
+      <td>446.444872</td>
+      <td>0.000000</td>
+      <td>10.508325</td>
+      <td>16.885406</td>
+      <td>23.606757</td>
+      <td>30.758447</td>
+      <td>39.698130</td>
+      <td>53.372662</td>
+      <td>69.215827</td>
+      <td>85.769784</td>
+      <td>111.212230</td>
+      <td>142.765288</td>
+      <td>178.90661</td>
+      <td>224.499774</td>
+      <td>281.124718</td>
+      <td>354.155898</td>
+      <td>0.000000</td>
+      <td>9.006660</td>
+      <td>12.508325</td>
+      <td>14.885406</td>
+      <td>20.606757</td>
+      <td>30.358447</td>
+      <td>41.698130</td>
+      <td>53.372662</td>
+      <td>68.655827</td>
+      <td>89.569784</td>
+      <td>113.212230</td>
+      <td>139.125288</td>
+      <td>175.599820</td>
+      <td>221.899774</td>
+      <td>280.324718</td>
+      <td>0.000000</td>
+      <td>6.205328</td>
+      <td>6.006660</td>
+      <td>10.247554</td>
+      <td>15.309442</td>
+      <td>22.886803</td>
+      <td>32.358504</td>
+      <td>38.698130</td>
+      <td>50.924662</td>
+      <td>67.655827</td>
+      <td>88.569784</td>
+      <td>109.429005</td>
+      <td>139.286256</td>
+      <td>176.607820</td>
+      <td>223.259774</td>
+      <td>0.000000</td>
+      <td>0.964262</td>
+      <td>0.958416</td>
+      <td>6.198043</td>
+      <td>9.247554</td>
+      <td>14.309442</td>
+      <td>22.886803</td>
+      <td>28.862184</td>
+      <td>39.827730</td>
+      <td>52.284662</td>
+      <td>67.855827</td>
+      <td>83.543204</td>
+      <td>108.429005</td>
+      <td>138.086171</td>
+      <td>177.607820</td>
+      <td>0.000000</td>
+      <td>-2.164214</td>
+      <td>2.294733</td>
+      <td>4.118416</td>
+      <td>6.398020</td>
+      <td>7.447554</td>
+      <td>14.309406</td>
+      <td>19.089747</td>
+      <td>28.662127</td>
+      <td>40.827730</td>
+      <td>52.284662</td>
+      <td>65.356119</td>
+      <td>86.695149</td>
+      <td>110.869005</td>
+      <td>141.086256</td>
+      <td>0.000000</td>
+      <td>-3.8</td>
+      <td>-1.164214</td>
+      <td>0.294733</td>
+      <td>2.118416</td>
+      <td>3.758043</td>
+      <td>8.447554</td>
+      <td>14.063761</td>
+      <td>21.329747</td>
+      <td>31.662184</td>
+      <td>39.827730</td>
+      <td>50.684896</td>
+      <td>68.356119</td>
+      <td>86.695149</td>
+      <td>108.868937</td>
+      <td>0.000000</td>
+      <td>-3.545097</td>
+      <td>-1.931371</td>
+      <td>-1.764214</td>
+      <td>-0.305267</td>
+      <td>1.104664</td>
+      <td>3.880830</td>
+      <td>9.851038</td>
+      <td>16.063798</td>
+      <td>21.329747</td>
+      <td>30.862161</td>
+      <td>38.147916</td>
+      <td>52.684896</td>
+      <td>67.356119</td>
+      <td>85.095149</td>
+      <td>0.000000</td>
+      <td>-2.6</td>
+      <td>-3.800000</td>
+      <td>-2.411371</td>
+      <td>-4.244214</td>
+      <td>-0.902959</td>
+      <td>3.871302</td>
+      <td>6.089127</td>
+      <td>11.361409</td>
+      <td>17.951761</td>
+      <td>23.689701</td>
+      <td>29.318333</td>
+      <td>39.147916</td>
+      <td>49.884896</td>
+      <td>65.076119</td>
       <td>0.000000</td>
       <td>-2.0</td>
-      <td>-2.0</td>
-      <td>-4.000</td>
-      <td>-4.62500</td>
-      <td>-2.0000</td>
-      <td>-5.1875</td>
-      <td>-7.00</td>
-      <td>0.359375</td>
-      <td>7.71875</td>
-      <td>-3.750000</td>
-      <td>-2.875000</td>
-      <td>-5.937500</td>
-      <td>383.121094</td>
-      <td>-7.500000</td>
-      <td>0.000000</td>
-      <td>-4.5</td>
-      <td>-4.00</td>
+      <td>-1.0</td>
       <td>-4.0</td>
-      <td>-5.375</td>
-      <td>-3.00000</td>
-      <td>-6.375000</td>
-      <td>-5.000000</td>
-      <td>-6.000000</td>
-      <td>-3.96875</td>
-      <td>-0.824219</td>
-      <td>-3.312500</td>
       <td>-4.000000</td>
-      <td>145.609375</td>
-      <td>306.718750</td>
-      <td>0.000000</td>
-      <td>-3.5</td>
-      <td>-5.500</td>
-      <td>-5.625000</td>
-      <td>-7.12500</td>
-      <td>-6.468750</td>
-      <td>-1.96875</td>
-      <td>-4.269531</td>
-      <td>-8.750000</td>
-      <td>-4.000000</td>
-      <td>-3.00</td>
-      <td>-7.609375</td>
-      <td>-7.750</td>
-      <td>-3.00000</td>
-      <td>-4.00000</td>
-      <td>0.00000</td>
-      <td>-9.515625</td>
-      <td>-11.117188</td>
-      <td>-12.000000</td>
-      <td>-5.875000</td>
-      <td>-5.953125</td>
-      <td>-8.625000</td>
-      <td>-3.750000</td>
-      <td>-3.000</td>
-      <td>-1.000</td>
-      <td>-2.75</td>
-      <td>-4.8125</td>
-      <td>-1.875000</td>
-      <td>-3.500</td>
-      <td>28.09375</td>
-      <td>0.000000</td>
-      <td>-8.578125</td>
-      <td>-5.500000</td>
-      <td>-5.117188</td>
-      <td>-3.718750</td>
-      <td>-5.625000</td>
-      <td>-3.625000</td>
-      <td>-3.2500</td>
-      <td>-6.875</td>
-      <td>-5.25000</td>
-      <td>-3.50000</td>
-      <td>-5.168945</td>
-      <td>-4.250000</td>
-      <td>-7.562500</td>
-      <td>-5.625000</td>
-      <td>0.000000</td>
-      <td>-3.34375</td>
-      <td>-3.343750</td>
-      <td>-9.765625</td>
-      <td>-8.750000</td>
-      <td>-8.937500</td>
-      <td>-4.710938</td>
-      <td>-3.500000</td>
-      <td>-9.468750</td>
-      <td>-4.656250</td>
-      <td>-3.37500</td>
-      <td>-8.375000</td>
-      <td>-9.250000</td>
-      <td>-9.468750</td>
-      <td>-5.812500</td>
-      <td>0.000000</td>
-      <td>-5.199219</td>
-      <td>-11.039062</td>
-      <td>-8.679688</td>
-      <td>-10.171875</td>
-      <td>-10.582031</td>
-      <td>-5.281250</td>
-      <td>-12.601562</td>
-      <td>-14.046875</td>
-      <td>-10.296875</td>
-      <td>-5.750000</td>
-      <td>-7.562500</td>
-      <td>-6.632812</td>
-      <td>-4.406250</td>
-      <td>-1.968750</td>
-      <td>0.000000</td>
-      <td>-6.179688</td>
-      <td>-7.000000</td>
-      <td>-6.093750</td>
-      <td>-5.000000</td>
-      <td>-12.437500</td>
-      <td>-10.898438</td>
-      <td>-8.812500</td>
-      <td>-8.039062</td>
-      <td>-5.859375</td>
-      <td>-9.875000</td>
-      <td>-11.625000</td>
-      <td>-9.843750</td>
-      <td>-9.500000</td>
-      <td>-1.87500</td>
-      <td>0.00000</td>
-      <td>-9.375</td>
-      <td>-4.744141</td>
-      <td>-2.953125</td>
-      <td>-4.523438</td>
-      <td>-9.287109</td>
-      <td>-12.093750</td>
-      <td>-11.125000</td>
-      <td>-10.7500</td>
-      <td>-4.218750</td>
-      <td>-8.855469</td>
-      <td>-13.351562</td>
-      <td>-5.468750</td>
-      <td>-3.875000</td>
-      <td>-1.7500</td>
-      <td>0.00000</td>
-      <td>-7.736328</td>
-      <td>-9.665039</td>
-      <td>-7.734375</td>
-      <td>-3.000000</td>
-      <td>-10.095703</td>
-      <td>-8.062500</td>
-      <td>-11.203125</td>
-      <td>-10.62500</td>
-      <td>-5.625000</td>
-      <td>-6.156250</td>
-      <td>-10.250000</td>
-      <td>-4.875000</td>
-      <td>-4.750000</td>
-      <td>-7.87500</td>
-      <td>0.0000</td>
-      <td>-7.285156</td>
-      <td>-6.899292</td>
-      <td>-8.034546</td>
-      <td>-8.164062</td>
-      <td>-6.750000</td>
-      <td>-7.25000</td>
-      <td>-10.460938</td>
-      <td>-8.210938</td>
-      <td>-10.546875</td>
-      <td>-5.984375</td>
-      <td>-11.406250</td>
-      <td>-3.875000</td>
-      <td>0.000000</td>
-      <td>-3.93750</td>
-      <td>0.00000</td>
-      <td>-5.944901</td>
-      <td>-7.987183</td>
-      <td>-7.509766</td>
-      <td>-14.141113</td>
-      <td>-11.500000</td>
-      <td>-5.125</td>
-      <td>-6.75000</td>
-      <td>-8.496094</td>
-      <td>-2.937500</td>
-      <td>-4.773438</td>
-      <td>-6.757812</td>
-      <td>-7.390625</td>
-      <td>-9.703125</td>
-      <td>-5.62500</td>
-      <td>0.000000</td>
-      <td>-3.999985</td>
-      <td>-1.999969</td>
-      <td>-7.999756</td>
-      <td>-7.992188</td>
-      <td>-7.937500</td>
-      <td>-3.96875</td>
-      <td>-3.96875</td>
-      <td>-4.500000</td>
-      <td>-1.96875</td>
-      <td>-3.87500</td>
-      <td>-3.992188</td>
-      <td>-1.984375</td>
-      <td>-1.984375</td>
-      <td>-5.953125</td>
+      <td>-2.943167</td>
+      <td>1.321041</td>
+      <td>4.151302</td>
+      <td>7.689127</td>
+      <td>13.361409</td>
+      <td>16.951761</td>
+      <td>22.254666</td>
+      <td>30.318333</td>
+      <td>38.907916</td>
+      <td>49.060896</td>
       <td>0.000000</td>
     </tr>
     <tr>
       <th>W</th>
-      <td>0.0</td>
-      <td>-1.0</td>
-      <td>0.000</td>
-      <td>-4.50000</td>
-      <td>-3.875000</td>
-      <td>-5.6250</td>
-      <td>-5.25000</td>
-      <td>-6.0000</td>
-      <td>-1.875</td>
-      <td>-7.0000</td>
-      <td>-3.0</td>
-      <td>26.12500</td>
-      <td>191.375000</td>
-      <td>410.625000</td>
-      <td>719.343750</td>
-      <td>0.0</td>
-      <td>-1.500</td>
-      <td>-4.500</td>
-      <td>-3.296875</td>
-      <td>-5.000000</td>
-      <td>-6.5000</td>
-      <td>-1.875</td>
-      <td>-7.75</td>
-      <td>-1.50</td>
-      <td>-4.00000</td>
-      <td>25.687500</td>
-      <td>40.421875</td>
-      <td>37.34375</td>
-      <td>314.394531</td>
-      <td>849.976562</td>
-      <td>0.0</td>
-      <td>-6.0</td>
-      <td>-3.000</td>
-      <td>-2.25000</td>
-      <td>-7.7500</td>
-      <td>-2.0000</td>
-      <td>-1.50</td>
-      <td>-2.500000</td>
-      <td>0.00000</td>
-      <td>0.859375</td>
-      <td>-5.250000</td>
-      <td>18.148438</td>
-      <td>-2.875000</td>
-      <td>-4.250000</td>
-      <td>202.484375</td>
-      <td>0.0</td>
-      <td>-4.00</td>
-      <td>-4.0</td>
-      <td>-6.000</td>
-      <td>-5.34375</td>
-      <td>-8.562500</td>
-      <td>-5.718750</td>
-      <td>-4.500000</td>
-      <td>-4.81250</td>
-      <td>-5.500000</td>
-      <td>-2.000000</td>
-      <td>-7.000000</td>
-      <td>-1.000000</td>
       <td>0.000000</td>
-      <td>147.359375</td>
-      <td>0.0</td>
-      <td>-6.000</td>
-      <td>-4.000000</td>
-      <td>-5.00000</td>
-      <td>-4.500000</td>
-      <td>-7.62500</td>
-      <td>-5.976562</td>
-      <td>-3.429688</td>
-      <td>-3.214844</td>
-      <td>-8.75</td>
-      <td>-4.718750</td>
-      <td>-1.875</td>
-      <td>-5.90625</td>
-      <td>-8.37500</td>
-      <td>-5.00000</td>
+      <td>50.382235</td>
+      <td>64.227794</td>
+      <td>82.784742</td>
+      <td>107.230927</td>
+      <td>136.538799</td>
+      <td>174.423498</td>
+      <td>221.779373</td>
+      <td>282.224216</td>
+      <td>354.030270</td>
+      <td>447.537838</td>
+      <td>561.922298</td>
+      <td>703.652872</td>
+      <td>882.066090</td>
+      <td>1106.332613</td>
       <td>0.000000</td>
-      <td>-7.500000</td>
-      <td>-6.750000</td>
-      <td>-10.515625</td>
-      <td>-10.796875</td>
-      <td>-4.750000</td>
-      <td>-4.500000</td>
-      <td>-7.875</td>
-      <td>-4.875</td>
-      <td>-3.50</td>
-      <td>-1.0000</td>
-      <td>-2.500000</td>
-      <td>-3.875</td>
-      <td>-1.50000</td>
+      <td>39.305788</td>
+      <td>50.076187</td>
+      <td>66.345234</td>
+      <td>84.181542</td>
+      <td>107.726927</td>
+      <td>139.658659</td>
+      <td>175.823324</td>
+      <td>224.779373</td>
+      <td>280.824216</td>
+      <td>356.030270</td>
+      <td>446.069038</td>
+      <td>562.586298</td>
+      <td>705.732872</td>
+      <td>884.666298</td>
       <td>0.000000</td>
+      <td>27.728760</td>
+      <td>39.660949</td>
+      <td>52.076187</td>
+      <td>65.265234</td>
+      <td>86.581542</td>
+      <td>110.726927</td>
+      <td>138.658799</td>
+      <td>175.823498</td>
+      <td>224.243348</td>
+      <td>282.804184</td>
+      <td>357.255230</td>
+      <td>449.069038</td>
+      <td>562.586298</td>
+      <td>703.732872</td>
       <td>0.000000</td>
-      <td>-3.875000</td>
-      <td>-8.875000</td>
-      <td>-7.812500</td>
-      <td>-4.265625</td>
-      <td>-3.953125</td>
-      <td>-4.5000</td>
-      <td>-3.000</td>
-      <td>-1.75000</td>
-      <td>-8.81250</td>
-      <td>-5.906250</td>
-      <td>-4.074219</td>
-      <td>-5.598633</td>
-      <td>-4.742188</td>
-      <td>1.769531</td>
-      <td>0.00000</td>
-      <td>-5.953125</td>
-      <td>-3.187500</td>
-      <td>-4.031250</td>
-      <td>-10.140625</td>
-      <td>-9.500000</td>
-      <td>-9.093750</td>
-      <td>-5.113281</td>
-      <td>-4.859375</td>
-      <td>-7.56250</td>
-      <td>-1.500000</td>
-      <td>-1.750000</td>
-      <td>-9.390625</td>
-      <td>-9.250000</td>
-      <td>-9.421875</td>
+      <td>19.783008</td>
+      <td>29.728760</td>
+      <td>37.660949</td>
+      <td>52.012187</td>
+      <td>66.265234</td>
+      <td>86.581542</td>
+      <td>107.926927</td>
+      <td>138.658799</td>
+      <td>175.394678</td>
+      <td>224.243348</td>
+      <td>282.604078</td>
+      <td>358.255230</td>
+      <td>448.069038</td>
+      <td>559.306090</td>
       <td>0.000000</td>
-      <td>-5.906250</td>
-      <td>-4.578125</td>
-      <td>-9.976562</td>
-      <td>-6.937500</td>
-      <td>-6.250000</td>
-      <td>-10.390625</td>
-      <td>-5.343750</td>
-      <td>-10.890625</td>
-      <td>-14.414062</td>
-      <td>-10.936523</td>
-      <td>-6.656250</td>
-      <td>-10.082031</td>
-      <td>-5.906250</td>
-      <td>-4.937500</td>
+      <td>13.426406</td>
+      <td>21.783008</td>
+      <td>28.887800</td>
+      <td>38.609749</td>
+      <td>51.368182</td>
+      <td>66.710227</td>
+      <td>87.137784</td>
+      <td>110.172230</td>
+      <td>138.965288</td>
+      <td>178.706610</td>
+      <td>225.883262</td>
+      <td>283.604078</td>
+      <td>354.455098</td>
+      <td>445.444872</td>
       <td>0.000000</td>
-      <td>-4.500000</td>
-      <td>-10.328125</td>
-      <td>-6.875000</td>
-      <td>-5.468750</td>
-      <td>-7.468750</td>
-      <td>-13.359375</td>
-      <td>-10.750000</td>
-      <td>-10.019531</td>
-      <td>-5.929688</td>
-      <td>-5.996582</td>
-      <td>-11.693359</td>
-      <td>-13.914062</td>
-      <td>-7.50000</td>
-      <td>-9.18750</td>
-      <td>0.000</td>
-      <td>-4.500000</td>
-      <td>-9.750000</td>
-      <td>-1.000000</td>
-      <td>-2.625000</td>
-      <td>-4.574219</td>
-      <td>-11.818359</td>
-      <td>-10.9375</td>
-      <td>-4.000000</td>
-      <td>-11.562500</td>
-      <td>-5.289062</td>
-      <td>-8.527344</td>
-      <td>-13.125000</td>
-      <td>-3.5000</td>
-      <td>-4.37500</td>
+      <td>7.541125</td>
+      <td>14.426406</td>
+      <td>20.110240</td>
+      <td>27.275614</td>
+      <td>39.094546</td>
+      <td>50.368182</td>
+      <td>66.215827</td>
+      <td>87.769784</td>
+      <td>112.21223</td>
+      <td>142.765288</td>
+      <td>179.706610</td>
+      <td>224.883262</td>
+      <td>283.124718</td>
+      <td>355.155898</td>
       <td>0.000000</td>
-      <td>-1.998047</td>
-      <td>-7.296875</td>
-      <td>-7.940430</td>
-      <td>-6.656250</td>
-      <td>-4.500000</td>
-      <td>-6.750000</td>
-      <td>-8.25000</td>
-      <td>-8.437500</td>
-      <td>-9.750000</td>
-      <td>-5.730469</td>
-      <td>-4.687500</td>
-      <td>-7.500000</td>
-      <td>-4.50000</td>
-      <td>-6.0625</td>
+      <td>6.406660</td>
+      <td>10.508325</td>
+      <td>16.885406</td>
+      <td>23.606757</td>
+      <td>30.758447</td>
+      <td>39.698130</td>
+      <td>53.372662</td>
+      <td>69.215827</td>
+      <td>85.769784</td>
+      <td>111.21223</td>
+      <td>142.765288</td>
+      <td>178.906610</td>
+      <td>224.499774</td>
+      <td>281.124718</td>
       <td>0.000000</td>
-      <td>-3.984375</td>
-      <td>-5.871094</td>
-      <td>-6.399414</td>
-      <td>-8.325684</td>
-      <td>-7.00000</td>
-      <td>-7.687500</td>
-      <td>-7.500000</td>
-      <td>-9.171875</td>
-      <td>-7.671875</td>
-      <td>-10.783203</td>
-      <td>-5.710938</td>
-      <td>-10.531250</td>
-      <td>-3.93750</td>
-      <td>-7.18750</td>
+      <td>4.205328</td>
+      <td>9.006660</td>
+      <td>12.508325</td>
+      <td>14.885406</td>
+      <td>20.606757</td>
+      <td>30.358504</td>
+      <td>41.698130</td>
+      <td>53.372662</td>
+      <td>68.655827</td>
+      <td>89.569784</td>
+      <td>113.212230</td>
+      <td>139.125288</td>
+      <td>175.599820</td>
+      <td>221.899774</td>
       <td>0.000000</td>
-      <td>-3.968750</td>
-      <td>-5.909668</td>
-      <td>-7.728455</td>
-      <td>-7.271484</td>
-      <td>-11.625</td>
-      <td>-9.00000</td>
-      <td>-5.046875</td>
-      <td>-6.625000</td>
-      <td>-7.250000</td>
-      <td>-3.187500</td>
-      <td>-3.953125</td>
-      <td>-7.187500</td>
-      <td>-6.21875</td>
-      <td>-9.789062</td>
+      <td>1.964262</td>
+      <td>6.205328</td>
+      <td>6.006660</td>
+      <td>10.247525</td>
+      <td>15.309442</td>
+      <td>22.886803</td>
+      <td>32.358504</td>
+      <td>38.698130</td>
+      <td>50.924662</td>
+      <td>67.655827</td>
+      <td>88.569784</td>
+      <td>109.429005</td>
+      <td>139.286256</td>
+      <td>176.607820</td>
       <td>0.000000</td>
-      <td>-3.998047</td>
-      <td>-3.984375</td>
-      <td>-1.992188</td>
-      <td>-7.750000</td>
-      <td>-7.75000</td>
-      <td>-7.00000</td>
+      <td>-1.428590</td>
+      <td>0.964262</td>
+      <td>0.958434</td>
+      <td>6.198043</td>
+      <td>9.247554</td>
+      <td>14.309442</td>
+      <td>22.886803</td>
+      <td>28.862184</td>
+      <td>39.827730</td>
+      <td>52.284662</td>
+      <td>67.855827</td>
+      <td>83.543204</td>
+      <td>108.429005</td>
+      <td>138.086171</td>
+      <td>0.000000</td>
       <td>-3.000000</td>
-      <td>-3.87500</td>
-      <td>-5.90625</td>
-      <td>-1.968750</td>
-      <td>-3.500000</td>
-      <td>-3.875000</td>
-      <td>-1.875000</td>
-      <td>-1.750000</td>
+      <td>-2.164214</td>
+      <td>2.294733</td>
+      <td>4.118416</td>
+      <td>6.398020</td>
+      <td>7.447554</td>
+      <td>14.309406</td>
+      <td>19.089747</td>
+      <td>28.662127</td>
+      <td>40.827730</td>
+      <td>52.284662</td>
+      <td>65.356119</td>
+      <td>86.695149</td>
+      <td>110.868937</td>
+      <td>0.0</td>
+      <td>-1.000000</td>
+      <td>-3.800000</td>
+      <td>-1.164214</td>
+      <td>0.294733</td>
+      <td>2.118416</td>
+      <td>3.758043</td>
+      <td>8.447554</td>
+      <td>14.063798</td>
+      <td>21.329747</td>
+      <td>31.662184</td>
+      <td>39.827702</td>
+      <td>50.684896</td>
+      <td>68.356119</td>
+      <td>86.695149</td>
+      <td>0.000000</td>
+      <td>-2.000000</td>
+      <td>-3.545097</td>
+      <td>-1.931371</td>
+      <td>-1.764214</td>
+      <td>-0.305267</td>
+      <td>1.104664</td>
+      <td>3.880807</td>
+      <td>9.851038</td>
+      <td>16.063798</td>
+      <td>21.329729</td>
+      <td>30.862127</td>
+      <td>38.147916</td>
+      <td>52.684896</td>
+      <td>67.356119</td>
+      <td>0.0</td>
+      <td>-2.000000</td>
+      <td>-2.600000</td>
+      <td>-3.800000</td>
+      <td>-2.411371</td>
+      <td>-4.244214</td>
+      <td>-0.902959</td>
+      <td>3.871302</td>
+      <td>6.089127</td>
+      <td>11.361409</td>
+      <td>17.951761</td>
+      <td>23.689701</td>
+      <td>29.318333</td>
+      <td>39.147916</td>
+      <td>49.884896</td>
+      <td>0.0</td>
+      <td>-2.0</td>
+      <td>-2.0</td>
+      <td>-1.000000</td>
+      <td>-4.000000</td>
+      <td>-4.000000</td>
+      <td>-2.943167</td>
+      <td>1.321041</td>
+      <td>4.151302</td>
+      <td>7.689127</td>
+      <td>13.361409</td>
+      <td>16.951761</td>
+      <td>22.254666</td>
+      <td>30.318333</td>
+      <td>38.907916</td>
     </tr>
   </tbody>
 </table>
@@ -15976,7 +15976,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[176]:</div>
+<div class="prompt input_prompt">In&nbsp;[380]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">PossibleA2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">arah</span><span class="p">):</span>
@@ -16015,11 +16015,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[177]:</div>
+<div class="prompt input_prompt">In&nbsp;[381]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">maxTabel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">arah</span><span class="p">,</span><span class="n">total</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">maxTabel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">arah</span><span class="p">,</span><span class="n">total</span><span class="p">,</span><span class="n">total2</span><span class="p">):</span>
     <span class="n">index</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="mi">15</span>
+    <span class="n">nomor</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
 <span class="c1">#     print(index)</span>
     <span class="n">temp</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="c1">#     print(arah)</span>
@@ -16027,7 +16028,8 @@ div#notebook {
         <span class="n">temp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">TabelQ</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
 <span class="c1">#     print temp</span>
     <span class="n">hasil</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
-    <span class="n">total</span> <span class="o">+=</span> <span class="n">hasil</span>
+    <span class="n">total2</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">index</span><span class="p">,</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]])</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span>
     <span class="n">temp</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="n">arah</span><span class="p">):</span>
 <span class="c1">#         print i</span>
@@ -16036,14 +16038,18 @@ div#notebook {
             
     <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span> 
     <span class="k">if</span> <span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;N&#39;</span> <span class="p">:</span>
+        <span class="n">perjalanan</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">index</span><span class="p">,</span><span class="s1">&#39;N&#39;</span><span class="p">,</span><span class="n">index</span><span class="o">-</span><span class="mi">15</span><span class="p">])</span>
         <span class="n">y</span><span class="o">-=</span><span class="mi">1</span>
     <span class="k">elif</span> <span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;S&#39;</span> <span class="p">:</span>
+        <span class="n">perjalanan</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">index</span><span class="p">,</span><span class="s1">&#39;S&#39;</span><span class="p">,</span><span class="n">index</span><span class="o">+</span><span class="mi">15</span><span class="p">])</span>
         <span class="n">y</span><span class="o">+=</span><span class="mi">1</span>
     <span class="k">elif</span> <span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;E&#39;</span> <span class="p">:</span>
+        <span class="n">perjalanan</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">index</span><span class="p">,</span><span class="s1">&#39;E&#39;</span><span class="p">,</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
         <span class="n">x</span><span class="o">+=</span><span class="mi">1</span>
     <span class="k">elif</span> <span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;W&#39;</span> <span class="p">:</span>
+        <span class="n">perjalanan</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">index</span><span class="p">,</span><span class="s1">&#39;W&#39;</span><span class="p">,</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
         <span class="n">x</span><span class="o">-=</span><span class="mi">1</span>
-    <span class="k">return</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">total</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">total</span><span class="p">,</span><span class="n">total2</span>
 </pre></div>
 
     </div>
@@ -16060,22 +16066,32 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[178]:</div>
+<div class="prompt input_prompt">In&nbsp;[382]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">14</span>
-<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">state</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">total</span><span class="o">=</span> <span class="mi">0</span>
+<span class="n">state</span><span class="p">,</span><span class="n">total2</span> <span class="o">=</span> <span class="p">[],[]</span>
+<span class="n">perjalanan</span><span class="p">,</span><span class="n">nomor</span> <span class="o">=</span> <span class="p">[],[]</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">x</span><span class="o">!=</span><span class="mi">14</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">y</span><span class="o">!=</span><span class="mi">0</span><span class="p">):</span>
     <span class="n">state</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">])</span>
     <span class="n">arah</span> <span class="o">=</span> <span class="n">PossibleA</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 
     <span class="n">arah</span> <span class="o">=</span> <span class="n">PossibleA2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">arah</span><span class="p">)</span>
 
-    <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">total</span> <span class="o">=</span> <span class="n">maxTabel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">arah</span><span class="p">,</span><span class="n">total</span><span class="p">)</span>
-<span class="k">print</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span>
-<span class="k">print</span> <span class="n">total</span>
+    <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">total</span><span class="p">,</span><span class="n">total2</span> <span class="o">=</span> <span class="n">maxTabel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">arah</span><span class="p">,</span><span class="n">total</span><span class="p">,</span><span class="n">total2</span><span class="p">)</span>
+
+<span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="mi">500</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Titik Akhir &#39;</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Total Reward&#39;</span><span class="p">,</span><span class="n">total</span><span class="p">)</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">total2</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+<span class="n">header</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">header</span><span class="p">)</span>
+<span class="n">t</span>
 </pre></div>
 
     </div>
@@ -16092,12 +16108,269 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>14 0
-2728.8572540283203
+<pre>(&#39;Titik Akhir &#39;, 14, 0)
+(&#39;Total Reward&#39;, 452)
 </pre>
 </div>
 </div>
 
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[382]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>210</th>
+      <th>195</th>
+      <th>180</th>
+      <th>165</th>
+      <th>150</th>
+      <th>135</th>
+      <th>120</th>
+      <th>121</th>
+      <th>106</th>
+      <th>107</th>
+      <th>92</th>
+      <th>93</th>
+      <th>94</th>
+      <th>95</th>
+      <th>96</th>
+      <th>97</th>
+      <th>82</th>
+      <th>83</th>
+      <th>84</th>
+      <th>85</th>
+      <th>70</th>
+      <th>71</th>
+      <th>56</th>
+      <th>41</th>
+      <th>26</th>
+      <th>27</th>
+      <th>28</th>
+      <th>29</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>-2</td>
+      <td>-2</td>
+      <td>-2</td>
+      <td>-1</td>
+      <td>-3</td>
+      <td>-3</td>
+      <td>-3</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-2</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-3</td>
+      <td>-2</td>
+      <td>-1</td>
+      <td>-2</td>
+      <td>-2</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-3</td>
+      <td>-1</td>
+      <td>-1</td>
+      <td>-2</td>
+      <td>-2</td>
+      <td>-2</td>
+      <td>-1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[383]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">perjalanan</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+
+<span class="n">header</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">header</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[383]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>210</th>
+      <th>195</th>
+      <th>180</th>
+      <th>165</th>
+      <th>150</th>
+      <th>135</th>
+      <th>120</th>
+      <th>121</th>
+      <th>106</th>
+      <th>107</th>
+      <th>92</th>
+      <th>93</th>
+      <th>94</th>
+      <th>95</th>
+      <th>96</th>
+      <th>97</th>
+      <th>82</th>
+      <th>83</th>
+      <th>84</th>
+      <th>85</th>
+      <th>70</th>
+      <th>71</th>
+      <th>56</th>
+      <th>41</th>
+      <th>26</th>
+      <th>27</th>
+      <th>28</th>
+      <th>29</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>E</td>
+      <td>N</td>
+      <td>E</td>
+      <td>N</td>
+      <td>E</td>
+      <td>E</td>
+      <td>E</td>
+      <td>E</td>
+      <td>E</td>
+      <td>N</td>
+      <td>E</td>
+      <td>E</td>
+      <td>E</td>
+      <td>N</td>
+      <td>E</td>
+      <td>N</td>
+      <td>N</td>
+      <td>N</td>
+      <td>E</td>
+      <td>E</td>
+      <td>E</td>
+      <td>N</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>195</td>
+      <td>180</td>
+      <td>165</td>
+      <td>150</td>
+      <td>135</td>
+      <td>120</td>
+      <td>121</td>
+      <td>106</td>
+      <td>107</td>
+      <td>92</td>
+      <td>93</td>
+      <td>94</td>
+      <td>95</td>
+      <td>96</td>
+      <td>97</td>
+      <td>82</td>
+      <td>83</td>
+      <td>84</td>
+      <td>85</td>
+      <td>70</td>
+      <td>71</td>
+      <td>56</td>
+      <td>41</td>
+      <td>26</td>
+      <td>27</td>
+      <td>28</td>
+      <td>29</td>
+      <td>14</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 
